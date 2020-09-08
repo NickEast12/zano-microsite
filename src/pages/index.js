@@ -27,11 +27,11 @@ const TitleSection = styled.section`
     padding: 2rem 0;
     h1 {
       text-align: center;
-      font-family: "Lubalin";
+      font-family: "Lubalin-Book";
       span {
         font-weight: bold;
         color: ${(props) => props.theme.blue};
-        font-family: "Lubalin";
+        font-family: "Lubalin-Book";
       }
     }
   }

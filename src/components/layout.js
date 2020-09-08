@@ -29,6 +29,9 @@ const GlobalStyle = createGlobalStyle`
     a:visited {
       color: inherit;
     }
+    a {
+      color: inherit!important;
+    }
     a:-webkit-any-link {
       text-decoration: none!important;
     }

@@ -10,3 +10,9 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Lubalin-Book";
+  src: url("LubalinGraphStd-Book.otf");
+  font-weight: normal;
+  font-style: normal;
+}
