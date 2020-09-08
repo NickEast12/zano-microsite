@@ -7,7 +7,11 @@ import styled from "styled-components";
 
 import Image from "../components/image";
 import Background from "../components/background";
+
+import ZanoHubLogo from "../images/Zano-Hub-logo.png";
+import ZanoUltraLogo from "../images/Zano-Ultra-logo.png";
 import TemplateLogo from "../images/ZANO-LOGO-WHITE.png";
+
 import ZanoHubBackGround from "../images/Zano-hub-background.png";
 import ZanoUltraBackground from "../images/Zano-Ultra-background-image.png";
 import Product2 from "../images/Zanohub.png";
@@ -521,8 +525,8 @@ const ButtonLinks = styled.section`
       width: 90%;
       margin: 0 auto;
       &__product {
-        width: 60%;
-        background: black;
+        width: 60%;.
+        background: transparent;
         border-radius: 100%;
         border: solid 7px ${(props) => props.theme.blue};
         margin: 0 auto;
@@ -534,19 +538,21 @@ const ButtonLinks = styled.section`
         p {
           margin: 0.5rem 0;
           font-size: 0.9rem;
+          color: black;
         }
         &__logo {
           margin-top: 1rem;
-          width: 90px;
+          width: 150px;
           display: block;
           margin: 0 auto;
         }
         &__product {
-          width: 70px;
-          margin-top: 0.25rem;
+          width: 80px;
+          margin-top: 0.45rem;
         }
         &__product2 {
           width: 70px;
+          margin-top: 0.45rem;
         }
       }
       &__contact {
@@ -627,7 +633,7 @@ const IndexPage = (props) => (
       </TitleSection>
       <ProductSection>
         <div className="product__left">
-          <img className="product__left__logo" src={TemplateLogo} alt="" />
+          <img className="product__left__logo" src={ZanoHubLogo} alt="" />
           <p>
             The world's first 80,000hz LED driver, eliminating light flicker for
             good.
@@ -635,7 +641,7 @@ const IndexPage = (props) => (
           <img className="product__left__img" src={Product1} alt="" />
         </div>
         <div className="product__right">
-          <img className="product__right__logo" src={TemplateLogo} alt="" />
+          <img className="product__right__logo" src={ZanoUltraLogo} alt="" />
           <p>the next generation in smart, integrated lighting control</p>
           <img className="product__right__img" src={Product2} alt="" />
         </div>
@@ -713,7 +719,7 @@ const IndexPage = (props) => (
             <p>Learn more </p>
             <img
               className="button__wrapper__product__logo"
-              src={TemplateLogo}
+              src={ZanoUltraLogo}
               alt="Zano Logo"
             />
             <img
@@ -729,7 +735,7 @@ const IndexPage = (props) => (
             <p>Learn more </p>
             <img
               className="button__wrapper__product__logo"
-              src={TemplateLogo}
+              src={ZanoHubLogo}
               alt="Zano Logo"
             />
             <img

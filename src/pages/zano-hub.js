@@ -14,6 +14,15 @@ import Flicker from "../images/flicker.png";
 import LowerBackground from "../images/light2.png";
 import ZanoHub from "../images/Zanohub.png";
 
+import Icon1 from "../images/icons/Zano01.png";
+import Icon2 from "../images/icons/Zano02.png";
+import Icon3 from "../images/icons/Zano03.png";
+import Icon4 from "../images/icons/Zano04.png";
+import Icon5 from "../images/icons/Zano05.png";
+import Icon6 from "../images/icons/Zano06.png";
+import Icon7 from "../images/icons/Zano07.png";
+import Icon8 from "../images/icons/Zano08.png";
+
 const TopSection = styled.section`
   @media only screen and (min-width: 320px) {
     .ultra__title {
@@ -70,7 +79,8 @@ const IconSection = styled.section`
       grid-template-columns: 1fr 1fr;
       div {
         margin-bottom: 1rem;
-        i {
+        img {
+          width: 80px;
         }
         h5 {
           font-size: 1rem;
@@ -146,7 +156,7 @@ const Ultra = (props) => {
       <IconSection>
         <div className="icon__wrapper">
           <div>
-            <i>ICON</i>
+            <img src={Icon1} alt="Direct Connection Icon" />
             <h5>Direct Connections</h5>
             <p>
               Switches still connect directly to the lights so also work without
@@ -154,12 +164,12 @@ const Ultra = (props) => {
             </p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon2} alt="Safe and secure icon" />
             <h5>Safe and secure</h5>
             <p>Using AS128 encryption</p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon3} alt="Daylight saving icon" />
             <h5>Daylight saving</h5>
             <p>
               Automatically reduce light level during the working day reducing
@@ -167,14 +177,14 @@ const Ultra = (props) => {
             </p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon4} alt="Energy saving icon" />
             <h5>Energy saving</h5>
             <p>
               Sensors switch off or reduce light levels if rooms are not used
             </p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon5} alt="Smart PIR Icon" />
             <h5>Smart PIR</h5>
             <p>
               Extra features over and above all standard PIRs. Fully
@@ -182,7 +192,7 @@ const Ultra = (props) => {
             </p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon6} alt="Emergency lighting control Icon" />
             <h5>Emergency lighting control</h5>
             <p>
               Tuneable run-time. Automatic alerts. Automatic fault
@@ -190,7 +200,7 @@ const Ultra = (props) => {
             </p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon7} alt="Emergency lighting battery management Icon" />
             <h5>Emergency lighting battery management</h5>
             <p>
               Automatic battery status reports. Automatic battery failure
@@ -200,7 +210,7 @@ const Ultra = (props) => {
             </p>
           </div>
           <div>
-            <i>ICON</i>
+            <img src={Icon8} alt="Circadian lighting Icon" />
             <h5>Circadian lighting</h5>
             <p>
               Let your customer enjoy the health benefits of Circadian lighting

@@ -9,6 +9,10 @@ import BoxBackground from "../images/Zano-hub-background.png";
 import ZanoChip from "../images/Zano-Microchip-v1.png";
 import ZanoHub from "../images/Zanohub.png";
 
+import FacebookIcon from "../assets/facebook.svg";
+import LinkedinIcon from "../assets/linkedin.svg";
+import TwitterIcon from "../assets/twitter.svg";
+
 const MainSection = styled.section`
   @media only screen and (min-width: 320px) {
     width: 90%;
@@ -21,7 +25,7 @@ const MainSection = styled.section`
       }
       &__box {
         background-image: url(${BoxBackground});
-        background-size: cover;
+        background-size: 100% 150%;
         background-repeat: no-repeat;
         padding: 2rem 0;
         color: white;
@@ -39,7 +43,7 @@ const MainSection = styled.section`
         }
         &__grid {
           width: 95%;
-          margin: 1.5rem auto 0 auto;
+          margin: 2rem auto 0 auto;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           text-align: center;
@@ -128,6 +132,24 @@ const LowerSection = styled.section`
     }
     h2 {
       font-family: "Lubalin";
+      margin: 2rem 0 1rem 0;
+    }
+    .icons {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      align-content: center;
+      align-items: center;
+      div {
+        margin: 1.5rem 0;
+      }
+      svg {
+        width: 25px;
+
+        fill: ${(props) => props.theme.blue};
+      }
     }
   }
   @media only screen and (min-width: 414px) {
@@ -149,8 +171,9 @@ const Contact = (props) => {
               For more information contact Jenny Knighting
             </p>
             <p className="contact__wrapper__box__email ">
-              {" "}
-              jenny.knighting@zanocontrols.co.uk
+              <a href="mailto:jenny.knighting@zanocontrols.co.uk">
+                jenny.knighting@zanocontrols.co.uk
+              </a>
             </p>
             <div className="contact__wrapper__box__grid">
               <div className="contact__wrapper__box__grid__chip">
@@ -175,6 +198,17 @@ const Contact = (props) => {
         <h2>Total lighting control</h2>
         <p>www.zanocontrol.co.uk</p>
         <p>0345 519 5858</p>
+        <div className="icons">
+          <div>
+            <FacebookIcon />
+          </div>
+          <div>
+            <LinkedinIcon />
+          </div>
+          <div>
+            <TwitterIcon />
+          </div>
+        </div>
       </LowerSection>
     </Layout>
   );
