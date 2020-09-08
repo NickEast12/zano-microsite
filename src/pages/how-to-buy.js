@@ -45,6 +45,7 @@ const MainSection = styled.section`
       h4 {
         font-size: 1rem;
         margin-top: 1.5rem;
+        font-family: "Lubalin-Book";
       }
       .hub {
         width: 150px;

@@ -68,7 +68,7 @@ const MiddleSection = styled.section`
     .flicker__title {
       padding: 5rem 0 2rem 0;
       h2 {
-        font-family: "Lubalin";
+        font-family: "Lubalin-Book";
         font-size: 1.5rem;
       }
       &__blue {
@@ -110,7 +110,7 @@ const LowerSection = styled.section`
       color: white;
       padding: 2rem;
       h4 {
-        font-family: "Lubalin";
+        font-family: "Lubalin-Book";
         span {
           color: ${(props) => props.theme.blue};
         }

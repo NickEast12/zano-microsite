@@ -204,6 +204,7 @@ const LowerProduct = styled.section`
       h2 {
         margin: 2rem 0 1.5rem 0;
         font-size: 2rem;
+        font-family: "Lubalin-Book";
       }
       h3 {
         font-weight: 100;
@@ -216,6 +217,7 @@ const LowerProduct = styled.section`
         margin: 1rem 0;
         font-size: 1.45rem;
         font-weight: 100;
+
         span {
           color: ${(props) => props.theme.blue};
           font-weight: bold;
@@ -282,6 +284,7 @@ const Regulation = styled.section`
       text-align: center;
       padding: 1.5rem 0;
       font-size: 1.5rem;
+      font-family: "Lubalin-Book";
     }
     .regulation__wrapper {
       width: 90%;
