@@ -16,7 +16,7 @@ const MainSection = styled.section`
     text-align: center;
     .contact__wrapper {
       h1 {
-        font-family: "Lubalin";
+        font-family: "Lubalin-Book";
         padding: 2rem 0;
       }
       &__box {

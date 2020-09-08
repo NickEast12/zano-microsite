@@ -22,11 +22,11 @@ const TopSection = styled.section`
       text-align: center;
       padding: 2rem 0;
       h1 {
-        font-family: "Lubalin";
+        font-family: "Lubalin-Book";
       }
       span {
         color: ${(props) => props.theme.blue};
-        font-family: "Lubalin";
+        font-family: "Lubalin-Book";
       }
     }
     .ultra__box {

@@ -381,10 +381,10 @@ const Regulation = styled.section`
           font-size: 1rem;
         }
         h6 {
-          font-size: 1.1rem;
+          font-size: 0.9rem;
         }
         &__float {
-          right: 0.75rem;
+          right: 0.45rem;
           text-align: right;
         }
       }
@@ -421,10 +421,10 @@ const Regulation = styled.section`
           font-size: 1rem;
         }
         h6 {
-          font-size: 1.1rem;
+          font-size: 1rem;
         }
         &__float {
-          right: 0.75rem;
+          right: 0.35rem;
           text-align: right;
         }
       }
