@@ -13,8 +13,7 @@ const BackgroundStyle = styled.div`
     height: 100%;
     background-image: url(${BackgroundImage});
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: 140% 100%;
   }
   @media only screen and (min-width: 1280px) {
     background-size: 100% 100%;
