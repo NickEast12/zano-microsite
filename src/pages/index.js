@@ -11,6 +11,8 @@ import Background from "../components/background";
 import ZanoHubLogo from "../images/Zano-Hub-logo.png";
 import ZanoUltraLogo from "../images/Zano-Ultra-logo.png";
 import TemplateLogo from "../images/ZANO-LOGO-WHITE.png";
+import ZanoHubLogoReverse from "../images/Zano-Hub-reverse.png";
+import ZanoUltraLogoReverse from "../images/Zano-Ultra-reverse.png";
 
 import ZanoHubBackGround from "../images/Zano-hub-background.png";
 import ZanoUltraBackground from "../images/Zano-Ultra-background-image.png";
@@ -22,7 +24,11 @@ import LegalBackground2 from "../images/why-does.png";
 const HomePageWrapper = styled.div`
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   position: relative;
+  @media only screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
 `;
 const TitleSection = styled.section`
   @media only screen and (min-width: 320px) {
@@ -57,10 +63,10 @@ const ProductSection = styled.section`
 
     div {
       color: white;
-      padding: 2.5rem 2rem 0rem 2rem;
+      padding: 3rem 2rem 0rem 3rem;
       height: 20rem;
       img {
-        width: 100px;
+        width: 150px;
       }
       p {
         margin: 1rem 0 0.5rem 0;
@@ -71,7 +77,8 @@ const ProductSection = styled.section`
       background-image: url(${ZanoUltraBackground});
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      margin-bottom: 1.5rem;
+      margin-bottom: 23px;
+
       &__img {
         width: 150px;
         padding-top: 0.5rem;
@@ -86,23 +93,28 @@ const ProductSection = styled.section`
         padding-top: 0.5rem;
       }
     }
-    .plus {
+    .plus__wrapper {
+      background: red;
+      width: 100%;
       position: absolute;
       z-index: 5;
-      top: 41.9%;
-      width: 50px;
-      left: 46%;
-      div {
-        position: absolute;
-        width: 26px;
-        height: 80px;
+      text-align: center;
+      top: 21.2rem;
+      .plus {
+        width: 5%;
+        margin: 0 auto;
         padding: 0;
-        margin-bottom: 1rem;
-        background: ${(props) => props.theme.blue};
-        transition: all 2s ease;
+        div {
+          position: absolute;
+          width: 26px;
+          height: 80px;
+          padding: 0;
+          margin-bottom: 1rem;
+          background: ${(props) => props.theme.blue};
 
-        &:nth-child(2) {
-          transform: rotate(90deg);
+          &:nth-child(2) {
+            transform: rotate(90deg);
+          }
         }
       }
     }
@@ -115,7 +127,8 @@ const ProductSection = styled.section`
   @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 4.5%;
+    grid-gap: 35px;
+
     div {
       height: 22.5rem;
     }
@@ -125,7 +138,7 @@ const ProductSection = styled.section`
         width: 160px;
       }
       &__img {
-        width: 250px;
+        width: 160px;
       }
     }
     .product__right {
@@ -134,17 +147,23 @@ const ProductSection = styled.section`
         width: 160px;
       }
       &__img {
-        width: 240px;
+        width: 160px;
         padding-top: 0;
       }
     }
-
-    .plus {
-      top: calc(0% + 2.5rem);
-      left: calc(0% + 20.6rem);
-      div {
-        width: 32px;
+    .plus__wrapper {
+      top: 2rem;
+      left: -3px;
+      .plus {
+        div {
+          width: 35px;
+        }
       }
+    }
+  }
+  @media only screen and (min-width: 997px) {
+    .plus__wrapper {
+      left: 2.6px;
     }
   }
   @media only screen and (min-width: 1024px) {
@@ -159,29 +178,63 @@ const ProductSection = styled.section`
         margin: 1rem auto;
       }
     }
-    .plus {
-      left: calc(0% + 24.35rem);
-      div {
-        width: 39px;
-        height: 100px;
+    .product__left {
+      &__img {
+        width: 235px;
+        margin-top: 1.5rem;
       }
+    }
+    .product__right {
+      &__img {
+        width: 215px;
+        margin-top: 2.5rem;
+      }
+    }
+    .plus__wrapper {
+      left: 2.8px;
+      .plus {
+        div {
+          width: 36px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1128px) {
+    .plus__wrapper {
+      left: 3.5px;
+    }
+  }
+  @media only screen and (min-width: 1214px) {
+    .plus__wrapper {
+      left: 6.5px;
+    }
+  }
+  @media only screen and (min-width: 1230px) {
+    .plus__wrapper {
+      left: 6.5px;
     }
   }
   @media only screen and (min-width: 1280px) {
     width: 70%;
-    .plus {
-      left: calc(0% + 26.75rem);
-      div {
-        width: 40px;
-      }
+    .plus__wrapper {
+      left: 5px;
     }
   }
+  @media only screen and (min-width: 1348px) {
+    .plus__wrapper {
+      left: 6px;
+    }
+  }
+  @media only screen and (min-width: 1420px) {
+    .plus__wrapper {
+      left: 8px;
+    }
+  }
+
   @media only screen and (min-width: 1440px) {
-    .plus {
-      left: calc(0% + 30.05rem);
-      div {
-        width: 46px;
-      }
+    .plus__wrapper {
+      left: 7px;
     }
   }
 `;
@@ -528,7 +581,7 @@ const ButtonLinks = styled.section`
       width: 90%;
       margin: 0 auto;
       &__product {
-        width: 60%;.
+        width: 170px;
         background: transparent;
         border-radius: 100%;
         border: solid 7px ${(props) => props.theme.blue};
@@ -559,7 +612,7 @@ const ButtonLinks = styled.section`
         }
       }
       &__contact {
-        width: 60%;
+        width: 170px;
         background: black;
         border-radius: 100%;
         border: solid 7px ${(props) => props.theme.blue};
@@ -580,31 +633,46 @@ const ButtonLinks = styled.section`
     .button__wrapper {
       &__product,
       &__contact {
-        width: 50%;
+        width: 160px;
+      }
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    .button__wrapper {
+      &__product,
+      &__contact {
+        width: 180px;
       }
     }
   }
   @media only screen and (min-width: 768px) {
     .button__wrapper {
       display: flex;
+      width: 80%;
       justify-content: space-between;
       &__product,
       &__contact {
-        width: 25%;
+        width: 160px;
+      }
+      &__contact {
+        p {
+          margin: 1.75rem auto;
+        }
       }
     }
   }
   @media only screen and (min-width: 1024px) {
     .button__wrapper {
-      width: 60%;
       justify-content: space-evenly;
     }
   }
   @media only screen and (min-width: 1280px) {
     .button__wrapper {
+      width: 60%;
       &__product,
       &__contact {
         height: 7rem;
+        width: 190px;
       }
       &__contact {
         P {
@@ -636,22 +704,35 @@ const IndexPage = (props) => (
       </TitleSection>
       <ProductSection>
         <div className="product__left">
-          <img className="product__left__logo" src={ZanoHubLogo} alt="" />
+          <img
+            className="product__left__logo"
+            src={ZanoHubLogoReverse}
+            alt="Zano Hub Logo"
+          />
           <p>
             The world's first 80,000hz LED driver, eliminating light flicker for
             good.
           </p>
-          <img className="product__left__img" src={Product1} alt="" />
+          <img className="product__left__img" src={Product1} alt="Zano Hub" />
         </div>
         <div className="product__right">
-          <img className="product__right__logo" src={ZanoUltraLogo} alt="" />
+          <img
+            className="product__right__logo"
+            src={ZanoUltraLogoReverse}
+            alt=" Zano Ultra Logo"
+          />
           <p>the next generation in smart, integrated lighting control</p>
-          <img className="product__right__img" src={Product2} alt="" />
+          <img
+            className="product__right__img"
+            src={Product2}
+            alt="Zano Ultra"
+          />
         </div>
-
-        <section className="plus">
-          <div></div>
-          <div></div>
+        <section className="plus__wrapper">
+          <section className="plus">
+            <div></div>
+            <div></div>
+          </section>
         </section>
       </ProductSection>
       <LowerProduct>
@@ -719,33 +800,39 @@ const IndexPage = (props) => (
       <ButtonLinks>
         <div className="button__wrapper">
           <div className="button__wrapper__product">
-            <p>Learn more </p>
-            <img
-              className="button__wrapper__product__logo"
-              src={ZanoUltraLogo}
-              alt="Zano Logo"
-            />
-            <img
-              className="button__wrapper__product__product"
-              src={Product1}
-              alt=""
-            />
+            <Link to="/zano-ultra">
+              <p>Learn more </p>
+              <img
+                className="button__wrapper__product__logo"
+                src={ZanoUltraLogo}
+                alt="Zano Logo"
+              />
+              <img
+                className="button__wrapper__product__product"
+                src={Product1}
+                alt=""
+              />
+            </Link>
           </div>
-          <div className="button__wrapper__contact">
-            <p>Contact us now</p>
-          </div>
+          <Link to="/contact">
+            <div className="button__wrapper__contact">
+              <p>Contact us now</p>
+            </div>
+          </Link>
           <div className="button__wrapper__product">
-            <p>Learn more </p>
-            <img
-              className="button__wrapper__product__logo"
-              src={ZanoHubLogo}
-              alt="Zano Logo"
-            />
-            <img
-              className="button__wrapper__product__product2"
-              src={Product2}
-              alt=""
-            />
+            <Link to="/zano-hub">
+              <p>Learn more </p>
+              <img
+                className="button__wrapper__product__logo"
+                src={ZanoHubLogo}
+                alt="Zano Logo"
+              />
+              <img
+                className="button__wrapper__product__product2"
+                src={Product2}
+                alt=""
+              />
+            </Link>
           </div>
         </div>
       </ButtonLinks>

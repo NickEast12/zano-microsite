@@ -94,7 +94,7 @@ const HowToBuy = (props) => {
       <MainWrapper>
         <MainSection>
           <div>
-            <h1>How do i buy?</h1>
+            <h1>How do I buy?</h1>
             <img className="chip" src={ZanoChip} alt="Zano Hub" />
             <h3 className="blue">
               We will sell a licence for the Zano Ultra microprocessor.
