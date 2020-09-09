@@ -14,6 +14,8 @@ import Flicker from "../images/flicker.png";
 import LowerBackground from "../images/light2.png";
 import ZanoHub from "../images/Zanohub.png";
 
+import HzImage from "../components/images/hzImage";
+
 const TopSection = styled.section`
   @media only screen and (min-width: 320px) {
     .ultra__title {
@@ -290,7 +292,8 @@ const Ultra = (props) => {
             <h2>But existing LED drivers cause flicker and health problems.</h2>
           </div>
           <div className="flicker__img">
-            <img src={Flicker} alt="" />
+            <img src={HzImage} alt="" />
+            <HzImage />
           </div>
           <div className="flicker__content">
             <p className="flicker__content__blue">

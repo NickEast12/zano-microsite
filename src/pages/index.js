@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import styled from "styled-components";
 
-import Image from "../components/image";
+import Image from "../components/images/image";
 import Background from "../components/background";
 
 import ZanoHubLogo from "../images/Zano-Hub-logo.png";
