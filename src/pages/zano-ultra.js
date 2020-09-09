@@ -59,6 +59,46 @@ const TopSection = styled.section`
       width: 80%;
     }
   }
+  @media only screen and (min-width: 768px) {
+    .ultra__title {
+      width: 70%;
+    }
+    .ultra__box {
+      width: 80%;
+      &__wrapper {
+        h2 {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .ultra__title {
+      h1 {
+        padding: 2rem 0;
+      }
+    }
+    .ultra__box {
+      width: 70%;
+      &__wrapper {
+        h2 {
+          font-size: 1.5rem;
+        }
+        &__logo {
+          width: 100px;
+        }
+        &__chip {
+          width: 205px;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    .ultra__title {
+      max-width: 1440px;
+    }
+  }
 `;
 const MiddleSection = styled.section`
   @media only screen and (min-width: 320px) {
@@ -95,7 +135,18 @@ const MiddleSection = styled.section`
     }
   }
   @media only screen and (min-width: 414px) {
-    width: 80%;
+    width: 99%;
+    .flicker__title {
+      padding: 5rem 0;
+    }
+    .flicker__img {
+      img {
+        width: 100%;
+      }
+    }
+    .flicker__content {
+      padding: 3.5rem 0;
+    }
   }
 `;
 const LowerSection = styled.section`

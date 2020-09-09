@@ -33,6 +33,10 @@ const DesktopHeader = styled.header`
         }
         li {
           flex-grow: 1;
+          transition: color 0.25s ease;
+          &:hover {
+            color: ${(props) => props.theme.blue};
+          }
           img {
             width: 150px;
           }
@@ -149,10 +153,18 @@ const MobileMenu = styled.header`
   }
 `;
 
+const HeaderContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media only screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
+`;
+
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div>
+    <HeaderContainer>
       <DesktopHeader>
         <div>
           <ul>
@@ -210,7 +222,7 @@ const Header = ({ siteTitle }) => {
           </ul>
         </div>
       </MobileMenu>
-    </div>
+    </HeaderContainer>
   );
 };
 
