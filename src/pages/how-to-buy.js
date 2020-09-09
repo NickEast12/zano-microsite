@@ -9,6 +9,13 @@ import ContactButton from "../components/contact-button";
 import ZanoChip from "../images/Zano-Microchip-v1.png";
 import ZanoHub from "../images/Zanohub.png";
 
+const MainWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media only screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
+`;
 const MainSection = styled.section`
   @media only screen and (min-width: 320px) {
     width: 90%;
@@ -60,6 +67,23 @@ const MainSection = styled.section`
   @media only screen and (min-width: 414px) {
     width: 80%;
   }
+  @media only screen and (min-width: 768px) {
+    width: 70%;
+    div {
+      .chip {
+        width: 200px;
+      }
+      .hub {
+        width: 170px;
+      }
+      h3 {
+        font-size: 1.7rem;
+      }
+      h4 {
+        font-size: 1.2rem;
+      }
+    }
+  }
 `;
 
 const HowToBuy = (props) => {
@@ -67,39 +91,40 @@ const HowToBuy = (props) => {
     <Layout>
       <SEO title="How to buy" />
       <Background />
-
-      <MainSection>
-        <div>
-          <h1>How do i buy?</h1>
-          <img className="chip" src={ZanoChip} alt="Zano Hub" />
-          <h3 className="blue">
-            We will sell a licence for the Zano Ultra microprocessor.
-          </h3>
-          <h3>
-            Manufacturers can then embed this revolutionary technology into
-            their designs.
-          </h3>
-          <p>
-            These microprocessors will be pre-programmed at manufacturing stage
-            and shipped out to the customers manufacturing plant to be installed
-            into their new LED drivers. They will have <span> ZANO 868 </span>{" "}
-            embedded into them which will allow for communication and remote
-            software upgrades.
-          </p>
-          <h4>
-            Through this new technology users can then access the Zano Hub.
-          </h4>
-          <img className="hub" src={ZanoHub} alt="Zano Hub" />
-          <h3 className="lower">
-            As a specialist in lighting control we understand the requirements
-            and regulations for lighting in the UK,{" "}
-            <span>
-              making us the perfect partner in your manufacturing process.{" "}
-            </span>
-          </h3>
-        </div>
-      </MainSection>
-      <ContactButton />
+      <MainWrapper>
+        <MainSection>
+          <div>
+            <h1>How do i buy?</h1>
+            <img className="chip" src={ZanoChip} alt="Zano Hub" />
+            <h3 className="blue">
+              We will sell a licence for the Zano Ultra microprocessor.
+            </h3>
+            <h3>
+              Manufacturers can then embed this revolutionary technology into
+              their designs.
+            </h3>
+            <p>
+              These microprocessors will be pre-programmed at manufacturing
+              stage and shipped out to the customers manufacturing plant to be
+              installed into their new LED drivers. They will have{" "}
+              <span> ZANO 868 </span> embedded into them which will allow for
+              communication and remote software upgrades.
+            </p>
+            <h4>
+              Through this new technology users can then access the Zano Hub.
+            </h4>
+            <img className="hub" src={ZanoHub} alt="Zano Hub" />
+            <h3 className="lower">
+              As a specialist in lighting control we understand the requirements
+              and regulations for lighting in the UK,{" "}
+              <span>
+                making us the perfect partner in your manufacturing process.{" "}
+              </span>
+            </h3>
+          </div>
+        </MainSection>
+        <ContactButton />
+      </MainWrapper>
     </Layout>
   );
 };

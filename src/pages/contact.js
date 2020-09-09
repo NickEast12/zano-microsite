@@ -49,12 +49,12 @@ const MainSection = styled.section`
           text-align: center;
           &__chip {
             img {
-              width: 90px;
+              width: 100px;
             }
           }
           &__hub {
             img {
-              width: 80px;
+              width: 95px;
             }
           }
           &__plus {
@@ -112,6 +112,85 @@ const MainSection = styled.section`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    .contact__wrapper {
+      &__box {
+        padding: 3rem;
+        &__content {
+          font-size: 1.3rem;
+        }
+        &__email {
+          font-size: 1.25rem;
+        }
+        &__grid {
+          margin-top: 0;
+          &__chip {
+            img {
+              width: 150px;
+            }
+          }
+          &__hub {
+            img {
+              width: 140px;
+            }
+          }
+          &__plus {
+            margin: 2.5rem 55% 0 auto;
+
+            div {
+              width: 18px;
+              height: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 70%;
+    .contact__wrapper {
+      &__box {
+        padding: 4rem 0;
+        &__content {
+          font-size: 1.5rem;
+        }
+        &__email {
+          font-size: 1.5rem;
+        }
+        &__grid {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .contact__wrapper {
+      &__box {
+        height: 15rem;
+        &__grid {
+          width: 80%;
+          margin: 3.5rem auto 0 auto;
+          &__chip {
+            img {
+              width: 200px;
+            }
+          }
+          &__hub {
+            img {
+              width: 190px;
+            }
+          }
+          &__plus {
+            margin: 5.5rem 55% 0 auto;
+
+            div {
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 const LowerSection = styled.section`
   @media only screen and (min-width: 320px) {
@@ -155,6 +234,34 @@ const LowerSection = styled.section`
   @media only screen and (min-width: 414px) {
     width: 80%;
   }
+  @media only screen and (min-width: 768px) {
+    .equals {
+      height: 70px;
+    }
+    .icons {
+      width: 30%;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    margin-top: 4rem;
+    padding-bottom: 15rem;
+  }
+  @media only screen and (min-width: 1280px) {
+    .equals {
+      margin-top: 6rem;
+      div {
+        width: 100px;
+      }
+    }
+  }
+`;
+
+const MainWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media only screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
 `;
 
 const Contact = (props) => {
@@ -162,54 +269,55 @@ const Contact = (props) => {
     <Layout>
       <SEO title="Contact" />
       <Background />
-
-      <MainSection>
-        <div className="contact__wrapper">
-          <h1>Want to know more?</h1>
-          <div className="contact__wrapper__box">
-            <p className="contact__wrapper__box__content">
-              For more information contact Jenny Knighting
-            </p>
-            <p className="contact__wrapper__box__email ">
-              <a href="mailto:jenny.knighting@zanocontrols.co.uk">
-                jenny.knighting@zanocontrols.co.uk
-              </a>
-            </p>
-            <div className="contact__wrapper__box__grid">
-              <div className="contact__wrapper__box__grid__chip">
-                <img src={ZanoChip} alt="Zano Chip" />
-              </div>
-              <div className="contact__wrapper__box__grid__plus">
-                <div></div>
-                <div></div>
-              </div>
-              <div className="contact__wrapper__box__grid__hub">
-                <img src={ZanoHub} alt="Zano Hub" />
+      <MainWrapper>
+        <MainSection>
+          <div className="contact__wrapper">
+            <h1>Want to know more?</h1>
+            <div className="contact__wrapper__box">
+              <p className="contact__wrapper__box__content">
+                For more information contact Jenny Knighting
+              </p>
+              <p className="contact__wrapper__box__email ">
+                <a href="mailto:jenny.knighting@zanocontrols.co.uk">
+                  jenny.knighting@zanocontrols.co.uk
+                </a>
+              </p>
+              <div className="contact__wrapper__box__grid">
+                <div className="contact__wrapper__box__grid__chip">
+                  <img src={ZanoChip} alt="Zano Chip" />
+                </div>
+                <div className="contact__wrapper__box__grid__plus">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div className="contact__wrapper__box__grid__hub">
+                  <img src={ZanoHub} alt="Zano Hub" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </MainSection>
-      <LowerSection>
-        <div className="equals">
-          <div></div>
-          <div></div>
-        </div>
-        <h2>Total lighting control</h2>
-        <p>www.zanocontrol.co.uk</p>
-        <p>0345 519 5858</p>
-        <div className="icons">
-          <div>
-            <FacebookIcon />
+        </MainSection>
+        <LowerSection>
+          <div className="equals">
+            <div></div>
+            <div></div>
           </div>
-          <div>
-            <LinkedinIcon />
+          <h2>Total lighting control</h2>
+          <p>www.zanocontrol.co.uk</p>
+          <p>0345 519 5858</p>
+          <div className="icons">
+            <div>
+              <FacebookIcon />
+            </div>
+            <div>
+              <LinkedinIcon />
+            </div>
+            <div>
+              <TwitterIcon />
+            </div>
           </div>
-          <div>
-            <TwitterIcon />
-          </div>
-        </div>
-      </LowerSection>
+        </LowerSection>
+      </MainWrapper>
     </Layout>
   );
 };

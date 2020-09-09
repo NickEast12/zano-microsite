@@ -135,7 +135,7 @@ const MiddleSection = styled.section`
     }
   }
   @media only screen and (min-width: 414px) {
-    width: 99%;
+    width: 80%;
     .flicker__title {
       padding: 5rem 0;
     }
@@ -146,6 +146,30 @@ const MiddleSection = styled.section`
     }
     .flicker__content {
       padding: 3.5rem 0;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    width: 80%;
+    .flicker__content {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    margin-top: 3.5rem;
+    width: 70%;
+  }
+  @media only screen and (min-width: 1280px) {
+    .flicker__img {
+      img {
+        width: 80%;
+      }
+    }
+    .flicker__content {
+      padding: 6rem 0;
+      width: 70%;
+      margin: 0 auto;
     }
   }
 `;
@@ -176,68 +200,120 @@ const LowerSection = styled.section`
   @media only screen and (min-width: 414px) {
     width: 80%;
   }
+  @media only screen and (min-width: 768px) {
+    div {
+      position: relative;
+      h4 {
+        width: 65%;
+        text-align: left;
+      }
+      img {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 70%;
+    div {
+      background-size: cover;
+
+      h4 {
+        width: 60%;
+        font-size: 1.5rem;
+      }
+      img {
+        right: 2rem;
+
+        top: 1rem;
+        width: 200px;
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    div {
+      padding: 3rem 3.5rem;
+      img {
+        top: 2rem;
+        right: 4rem;
+        width: 220px;
+      }
+    }
+  }
 `;
+
+const UltraBackground = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media only screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
+`;
+
 const Ultra = (props) => {
   return (
     <Layout>
       <SEO title="Zano Ultra" />
       <Background />
-      <TopSection>
-        <div className="ultra__title">
-          <h1>
-            The world's first <span> 80,00hz </span> LED driver
-          </h1>
-        </div>
-        <div className="ultra__box">
-          <div className="ultra__box__wrapper">
-            <img
-              src={Logo}
-              alt="Zano Logo"
-              className="ultra__box__wrapper__logo"
-            />
-            <h2>
-              Complying with regulations, eliminating flicker and subsequent
-              health problems for good.
-            </h2>
-            <img
-              src={Microchip}
-              alt="Zano Microchip"
-              className="ultra__box__wrapper__chip"
-            />
+      <UltraBackground>
+        <TopSection>
+          <div className="ultra__title">
+            <h1>
+              The world's first <span> 80,00hz </span> LED driver
+            </h1>
           </div>
-        </div>
-      </TopSection>
-      <MiddleSection>
-        <div className="flicker__title">
-          <h2 className="flicker__title__blue">
-            Every LED needs a driver to work.
-          </h2>
-          <h2>But existing LED drivers cause flicker and health problems.</h2>
-        </div>
-        <div className="flicker__img">
-          <img src={Flicker} alt="" />
-        </div>
-        <div className="flicker__content">
-          <p className="flicker__content__blue">
-            Fast track the new Zano Ultra into your existing product range.
-          </p>
-          <p>
-            No product redesign required – we simply supply you with a pcb
-            design to fit inside your existing enclosures ready for your
-            existing manufacturer to produce.
-          </p>
-        </div>
-      </MiddleSection>
-      <LowerSection>
-        <div>
-          <h4>
-            Now add a Zano Hub to your new <span>Zano Ultra </span> LED driver
-            and open up a smarter world to automatically control your lights.
-          </h4>
-          <img src={ZanoHub} alt="Zano Hub" />
-        </div>
-      </LowerSection>
-      <ContactButton />
+          <div className="ultra__box">
+            <div className="ultra__box__wrapper">
+              <img
+                src={Logo}
+                alt="Zano Logo"
+                className="ultra__box__wrapper__logo"
+              />
+              <h2>
+                Complying with regulations, eliminating flicker and subsequent
+                health problems for good.
+              </h2>
+              <img
+                src={Microchip}
+                alt="Zano Microchip"
+                className="ultra__box__wrapper__chip"
+              />
+            </div>
+          </div>
+        </TopSection>
+        <MiddleSection>
+          <div className="flicker__title">
+            <h2 className="flicker__title__blue">
+              Every LED needs a driver to work.
+            </h2>
+            <h2>But existing LED drivers cause flicker and health problems.</h2>
+          </div>
+          <div className="flicker__img">
+            <img src={Flicker} alt="" />
+          </div>
+          <div className="flicker__content">
+            <p className="flicker__content__blue">
+              Fast track the new Zano Ultra into your existing product range.
+            </p>
+            <p>
+              No product redesign required – we simply supply you with a pcb
+              design to fit inside your existing enclosures ready for your
+              existing manufacturer to produce.
+            </p>
+          </div>
+        </MiddleSection>
+        <LowerSection>
+          <div>
+            <h4>
+              Now add a Zano Hub to your new <span>Zano Ultra </span> LED driver
+              and open up a smarter world to automatically control your lights.
+            </h4>
+            <img src={ZanoHub} alt="Zano Hub" />
+          </div>
+        </LowerSection>
+        <ContactButton />
+      </UltraBackground>
     </Layout>
   );
 };
