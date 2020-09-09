@@ -96,7 +96,7 @@ const MobileHeader = styled.header`
 `;
 const StyledBurger = styled.div`
   @media only screen and (min-width: 320px) {
-    width: 15%;
+    width: 100%;
     height: 2rem;
     text-align: right;
     margin-top: -0.65rem;
