@@ -288,14 +288,14 @@ const LowerProduct = styled.section`
       &__stamp {
         width: 100%;
         div {
-          width: 70%;
+          width: 150px;
           margin: 2rem auto;
-          padding: 3rem 0;
+          padding: 2rem 0;
           background: black;
           border-radius: 100%;
           border: solid 7px ${(props) => props.theme.blue};
           img {
-            width: 140px;
+            width: 120px;
           }
         }
       }
