@@ -5,8 +5,9 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import styled from "styled-components";
 
-import Image from "../components/images/image";
 import Background from "../components/background";
+
+import ZanoMicrochip from "../components/images/ZanoMicrochip";
 
 import ZanoHubLogo from "../images/Zano-Hub-logo.png";
 import ZanoUltraLogo from "../images/Zano-Ultra-logo.png";
@@ -17,7 +18,9 @@ import ZanoUltraLogoReverse from "../images/Zano-Ultra-reverse.png";
 import ZanoHubBackGround from "../images/Zano-hub-background.png";
 import ZanoUltraBackground from "../images/Zano-Ultra-background-image.png";
 import Product2 from "../images/Zanohub.png";
+
 import Product1 from "../images/Zano-Microchip-v1.png";
+
 import LegalBackground1 from "../images/light2.png";
 import LegalBackground2 from "../images/why-does.png";
 
@@ -45,6 +48,9 @@ const TitleSection = styled.section`
       }
     }
   }
+  @media only screen and (min-width: 414px) {
+    width: 80%;
+  }
   @media only screen and (min-width: 768px) {
     padding: 4rem 0;
     width: 80%;
@@ -61,7 +67,8 @@ const ProductSection = styled.section`
     text-align: center;
     position: relative;
 
-    div {
+    .product__left,
+    .product__right {
       color: white;
       padding: 3rem 2rem 0rem 3rem;
       height: 20rem;
@@ -78,11 +85,13 @@ const ProductSection = styled.section`
       background-repeat: no-repeat;
       background-size: 100% 100%;
       margin-bottom: 23px;
-
-      &__img {
+      &__img__wrapper {
+        padding: 0;
+      }
+      /* &__img {
         width: 150px;
         padding-top: 0.5rem;
-      }
+      } */
     }
     .product__right {
       background-image: url(${ZanoHubBackGround});
@@ -714,6 +723,9 @@ const IndexPage = (props) => (
             good.
           </p>
           <img className="product__left__img" src={Product1} alt="Zano Hub" />
+          {/* <div className="product__left__img__wrapper">
+            <ZanoMicrochip />
+          </div> */}
         </div>
         <div className="product__right">
           <img
