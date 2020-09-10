@@ -72,9 +72,7 @@ const ProductSection = styled.section`
       color: white;
       padding: 3rem 2rem 0rem 3rem;
       height: 20rem;
-      img {
-        width: 150px;
-      }
+
       p {
         margin: 1rem 0 0.5rem 0;
         font-size: 1.1rem;
@@ -88,15 +86,21 @@ const ProductSection = styled.section`
       &__img__wrapper {
         padding: 0;
       }
-      /* &__img {
+      &__logo {
+        width: 175px;
+      }
+      &__img {
         width: 150px;
         padding-top: 0.5rem;
-      } */
+      }
     }
     .product__right {
       background-image: url(${ZanoHubBackGround});
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      &__logo {
+        width: 175px;
+      }
       &__img {
         width: 150px;
         padding-top: 0.5rem;
@@ -177,14 +181,16 @@ const ProductSection = styled.section`
   }
   @media only screen and (min-width: 1024px) {
     width: 80%;
-    div {
-    }
+
     .product__left,
     .product__right {
       p {
         font-size: 1.2rem;
         width: 70%;
         margin: 1rem auto;
+      }
+      &__logo {
+        width: 200px;
       }
     }
     .product__left {
@@ -226,6 +232,12 @@ const ProductSection = styled.section`
   }
   @media only screen and (min-width: 1280px) {
     width: 70%;
+    .product__right,
+    .product__left {
+      &__logo {
+        width: 240px;
+      }
+    }
     .plus__wrapper {
       left: 5px;
     }
