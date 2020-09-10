@@ -3,6 +3,7 @@ module.exports = {
     title: `Zano Site`,
     description: `needs to be added`,
     author: `Nick East`,
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,6 +47,32 @@ module.exports = {
           include: /assets/,
         },
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        ssr: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.example.com",
+        sitemap: "https://www.example.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `rgb(75, 173, 209)`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-preload-fonts`,
     },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
