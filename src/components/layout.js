@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
       margin: 0px;
       padding: 0px;
       -webkit-font-smoothing: antialiased;
-    font-family: 'Avant';
+    font-family: 'Avant', sans-serif;
     }
     body {
       margin: 0;
