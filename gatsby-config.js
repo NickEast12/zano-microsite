@@ -15,6 +15,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -70,9 +71,6 @@ module.exports = {
         // Disable the loading spinner.
         showSpinner: false,
       },
-    },
-    {
-      resolve: `gatsby-plugin-preload-fonts`,
     },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
