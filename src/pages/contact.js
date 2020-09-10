@@ -210,7 +210,7 @@ const LowerSection = styled.section`
       }
     }
     h2 {
-      font-family: "Lubalin";
+      font-family: "Lubalin-Book";
       margin: 2rem 0 1rem 0;
     }
     .icons {
