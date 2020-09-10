@@ -36,7 +36,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Avant", "Lubalin"],
+          families: ["Avant", "Lubalin", "Roboto-Medium", "Lubalin-Book"],
           urls: ["/fonts/fonts.css"],
         },
       },
