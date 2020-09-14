@@ -29,6 +29,9 @@ const HomePageWrapper = styled.div`
   height: 100%;
   margin: 0 auto;
   position: relative;
+  @media only screen and (min-width: 1024px) {
+    width: 80%;
+  }
   @media only screen and (min-width: 1440px) {
     max-width: 1440px;
   }
@@ -57,6 +60,9 @@ const TitleSection = styled.section`
     h1 {
       font-size: 1.95rem;
     }
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 70%;
   }
 `;
 const ProductSection = styled.section`
@@ -140,13 +146,14 @@ const ProductSection = styled.section`
   @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 35px;
+    grid-gap: 20px;
 
     div {
       height: 22.5rem;
     }
     .product__left {
       padding-top: 4rem;
+
       &__logo {
         width: 160px;
       }
@@ -166,14 +173,21 @@ const ProductSection = styled.section`
     }
     .plus__wrapper {
       top: 2rem;
-      left: -3px;
+      left: 5px;
+
       .plus {
         div {
-          width: 35px;
+          width: 20px;
         }
       }
     }
   }
+  @media only screen and (min-width: 943px) {
+    .plus__wrapper {
+      left: calc(0% + 0.53rem);
+    }
+  }
+
   @media only screen and (min-width: 997px) {
     .plus__wrapper {
       left: 2.6px;
@@ -186,7 +200,7 @@ const ProductSection = styled.section`
     .product__right {
       p {
         font-size: 1.2rem;
-        width: 70%;
+        width: 90%;
         margin: 1rem auto;
       }
       &__logo {
@@ -206,18 +220,18 @@ const ProductSection = styled.section`
       }
     }
     .plus__wrapper {
-      left: 2.8px;
-      .plus {
-        div {
-          width: 36px;
-        }
-      }
+      left: 6px;
     }
   }
 
   @media only screen and (min-width: 1128px) {
     .plus__wrapper {
       left: 3.5px;
+    }
+  }
+  @media only screen and (min-width: 1183px) {
+    .plus__wrapper {
+      left: calc(0% + 0.5rem);
     }
   }
   @media only screen and (min-width: 1214px) {
@@ -239,7 +253,8 @@ const ProductSection = styled.section`
       }
     }
     .plus__wrapper {
-      left: 5px;
+      left: calc(0% + 0.5rem);
+      width: 100%;
     }
   }
   @media only screen and (min-width: 1348px) {
@@ -255,7 +270,7 @@ const ProductSection = styled.section`
 
   @media only screen and (min-width: 1440px) {
     .plus__wrapper {
-      left: 7px;
+      left: calc(0% + 0.65rem);
     }
   }
 `;
@@ -300,14 +315,15 @@ const LowerProduct = styled.section`
       &__stamp {
         width: 100%;
         div {
-          width: 150px;
+          width: 130px;
+
           margin: 2rem auto;
           padding: 2rem 0;
           background: black;
           border-radius: 100%;
           border: solid 7px ${(props) => props.theme.blue};
           img {
-            width: 120px;
+            width: 100px;
           }
         }
       }
@@ -541,15 +557,15 @@ const Regulation = styled.section`
         }
         &__float {
           font-size: 1.1rem;
-          width: 20%;
+          width: 15%;
           right: 0.6rem;
         }
       }
       &__img {
         top: calc(0% + 19rem);
-        left: calc(0% + 27.5rem);
+        left: calc(0% + 25rem);
         img {
-          width: 225px;
+          width: 200px;
         }
       }
     }
@@ -559,11 +575,12 @@ const Regulation = styled.section`
       width: 80%;
       &__bottom {
         &__float {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
+          width: 20%;
         }
       }
       &__img {
-        left: calc(0% + 35rem);
+        left: calc(0% + 27rem);
       }
     }
   }
@@ -591,6 +608,10 @@ const Regulation = styled.section`
         &__float {
         }
       }
+      &__img {
+        left: auto;
+        right: calc(0% + 5%);
+      }
     }
   }
 `;
@@ -602,7 +623,7 @@ const ButtonLinks = styled.section`
       width: 90%;
       margin: 0 auto;
       &__product {
-        width: 170px;
+        width: 150px;
         background: transparent;
         border-radius: 100%;
         border: solid 7px ${(props) => props.theme.blue};
@@ -619,7 +640,7 @@ const ButtonLinks = styled.section`
         }
         &__logo {
           margin-top: 1rem;
-          width: 150px;
+          width: 130px;
           display: block;
           margin: 0 auto;
         }
@@ -633,19 +654,19 @@ const ButtonLinks = styled.section`
         }
       }
       &__contact {
-        width: 170px;
+        width: 150px;
         background: black;
         border-radius: 100%;
         border: solid 7px ${(props) => props.theme.blue};
         margin: 0 auto 1.25rem auto;
-        padding: 1.5rem 0;
+        padding: 1.25rem 0;
         height: 6rem;
         color: white;
         text-align: center;
         p {
           width: 90%;
-          margin: 2rem auto;
-          font-size: 1.2rem;
+          margin: 1.5rem auto;
+          font-size: 1.1rem;
         }
       }
     }
@@ -654,7 +675,7 @@ const ButtonLinks = styled.section`
     .button__wrapper {
       &__product,
       &__contact {
-        width: 160px;
+        width: 150px;
       }
     }
   }
@@ -662,7 +683,13 @@ const ButtonLinks = styled.section`
     .button__wrapper {
       &__product,
       &__contact {
-        width: 180px;
+        width: 160px;
+      }
+      &__contact {
+        p {
+          margin-top: 1.55rem;
+          width: 60%;
+        }
       }
     }
   }
@@ -676,8 +703,9 @@ const ButtonLinks = styled.section`
         width: 160px;
       }
       &__contact {
+        padding-top: 2rem;
         p {
-          margin: 1.75rem auto;
+          margin: 1rem auto;
         }
       }
     }
@@ -692,12 +720,10 @@ const ButtonLinks = styled.section`
       width: 60%;
       &__product,
       &__contact {
-        height: 7rem;
-        width: 190px;
       }
       &__contact {
         P {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
       &__product {

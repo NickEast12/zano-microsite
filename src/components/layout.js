@@ -18,13 +18,13 @@ const GlobalStyle = createGlobalStyle`
       margin: 0px;
       padding: 0px;
       -webkit-font-smoothing: antialiased;
-    font-family: 'Avant', sans-serif;
     }
     body {
       margin: 0;
       padding: 0;
       font-size: 1.25rem; 
       position: relative;
+      font-family: 'Avant', sans-serif;
     }
     a:visited {
       color: inherit;
