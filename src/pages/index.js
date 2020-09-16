@@ -29,6 +29,7 @@ const HomePageWrapper = styled.div`
   height: 100%;
   margin: 0 auto;
   position: relative;
+
   @media only screen and (min-width: 1024px) {
     width: 80%;
   }

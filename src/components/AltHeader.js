@@ -167,7 +167,7 @@ const Header = ({ siteTitle }) => {
     <HeaderContainer>
       <DesktopHeader>
         <div>
-          <ul>
+          <ul style={{ color: "white" }}>
             <li>
               <Link to="/zano-ultra">Zano Ultra</Link>
             </li>

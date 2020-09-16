@@ -248,6 +248,9 @@ const LowerSection = styled.section`
 const UltraBackground = styled.div`
   width: 100%;
   margin: 0 auto;
+  @media only screen and (min-width: 1024px) {
+    width: 80%;
+  }
   @media only screen and (min-width: 1440px) {
     max-width: 1440px;
   }
