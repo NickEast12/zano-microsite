@@ -97,6 +97,7 @@ const MobileMenu = styled.header`
       li {
         padding: 0.75rem 0;
         display: ${({ open }) => (open ? "block" : "none")};
+        font-weight: bolder;
       }
       .contact {
         color: ${(props) => props.theme.blue};

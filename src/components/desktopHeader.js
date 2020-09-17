@@ -48,6 +48,7 @@ const DesktopHeader = styled.header`
         li {
           flex-grow: 1;
           transition: color 0.25s ease;
+          font-weight: bolder;
           &:hover {
             color: ${(props) => props.theme.blue};
           }
@@ -104,7 +105,6 @@ const DesktopHeader = styled.header`
   }
   @media only screen and (min-width: 1550px) {
     .normal {
-      wid
     }
     .scrolling {
       ul {
