@@ -114,7 +114,6 @@ const ProductSection = styled.section`
       }
     }
     .plus__wrapper {
-      background: red;
       width: 100%;
       position: absolute;
       z-index: 5;
@@ -173,27 +172,42 @@ const ProductSection = styled.section`
       }
     }
     .plus__wrapper {
+      /* top: 2rem; */
+      /* left: 5px; */
+      background: ${(props) => props.theme.blue};
+      width: 100%;
+      height: 5rem;
+      content: "";
+      position: absolute;
       top: 2rem;
-      left: 5px;
+      left: 0;
+      z-index: -5;
 
       .plus {
         div {
-          width: 20px;
         }
       }
     }
-  }
-  @media only screen and (min-width: 943px) {
-    .plus__wrapper {
-      left: calc(0% + 0.53rem);
+    .plus_desktop {
+      width: 100%;
+      height: 5rem;
+      content: "";
+      position: absolute;
+      z-index: 20;
+      top: 2rem;
+
+      div {
+        margin: 0 auto;
+        transform: rotate(90deg);
+        width: 26px;
+        height: 80px;
+        padding: 0;
+        margin-bottom: 1rem;
+        background: ${(props) => props.theme.blue};
+      }
     }
   }
 
-  @media only screen and (min-width: 997px) {
-    .plus__wrapper {
-      left: 2.6px;
-    }
-  }
   @media only screen and (min-width: 1024px) {
     width: 80%;
 
@@ -220,31 +234,8 @@ const ProductSection = styled.section`
         margin-top: 2.5rem;
       }
     }
-    .plus__wrapper {
-      left: 6px;
-    }
   }
 
-  @media only screen and (min-width: 1128px) {
-    .plus__wrapper {
-      left: 3.5px;
-    }
-  }
-  @media only screen and (min-width: 1183px) {
-    .plus__wrapper {
-      left: calc(0% + 0.5rem);
-    }
-  }
-  @media only screen and (min-width: 1214px) {
-    .plus__wrapper {
-      left: 6.5px;
-    }
-  }
-  @media only screen and (min-width: 1230px) {
-    .plus__wrapper {
-      left: 6.5px;
-    }
-  }
   @media only screen and (min-width: 1280px) {
     width: 70%;
     .product__right,
@@ -252,26 +243,6 @@ const ProductSection = styled.section`
       &__logo {
         width: 240px;
       }
-    }
-    .plus__wrapper {
-      left: calc(0% + 0.5rem);
-      width: 100%;
-    }
-  }
-  @media only screen and (min-width: 1348px) {
-    .plus__wrapper {
-      left: 6px;
-    }
-  }
-  @media only screen and (min-width: 1420px) {
-    .plus__wrapper {
-      left: 8px;
-    }
-  }
-
-  @media only screen and (min-width: 1440px) {
-    .plus__wrapper {
-      left: calc(0% + 0.65rem);
     }
   }
 `;
@@ -762,9 +733,6 @@ const IndexPage = (props) => (
             good.
           </p>
           <img className="product__left__img" src={Product1} alt="Zano Hub" />
-          {/* <div className="product__left__img__wrapper">
-            <ZanoMicrochip />
-          </div> */}
         </div>
         <div className="product__right">
           <img
@@ -784,6 +752,9 @@ const IndexPage = (props) => (
             <div></div>
             <div></div>
           </section>
+        </section>
+        <section className="plus_desktop">
+          <div></div>
         </section>
       </ProductSection>
       <LowerProduct>
