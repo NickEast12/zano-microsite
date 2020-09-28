@@ -295,7 +295,6 @@ const Ultra = (props) => {
             <h2>But existing LED drivers cause flicker and health problems.</h2>
           </div>
           <div className="flicker__img">
-            <img src={HzImage} alt="" />
             <HzImage />
           </div>
           <div className="flicker__content">

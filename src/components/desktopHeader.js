@@ -12,6 +12,8 @@ const DesktopHeader = styled.header`
     height: 9rem;
     margin: 0 auto;
     width: 100%;
+    display: block;
+    width: 100%;
     .scrolling {
       background: white;
       box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
@@ -21,16 +23,16 @@ const DesktopHeader = styled.header`
       padding: 0;
       width: 100%;
       transition: 0.25s background ease;
-      ul {
+      .inner__nav__fix {
         width: 85%;
         margin: 0 auto;
       }
     }
-    display: block;
-    width: 100%;
-    div {
+
+    .inner__nav__fix {
       width: 85%;
       margin: 0 auto;
+
       ul {
         list-style: none;
         padding: 2rem 0;
@@ -61,54 +63,42 @@ const DesktopHeader = styled.header`
   }
   @media only screen and (min-width: 1024px) {
     width: 100%;
-    ul {
-      width: 80%;
-      margin: 0 auto;
-    }
-    .scrolling {
-      ul {
-        width: 65%;
-        margin: 0 auto;
+    .normal {
+      width: 100%;
+      .inner__nav__fix {
+        width: 55%;
+        max-width: 1440px;
       }
     }
-  }
-  @media only screen and (min-width: 1280px) {
-    .normal {
-      width: 70%;
-    }
+
     .scrolling {
-      ul {
-        width: 57%;
-        margin: 0 auto;
-        padding: 1rem 0;
-        li {
-          img {
-            width: 100px;
-          }
-        }
-      }
-    }
-  }
-  @media only screen and (min-width: 1440px) {
-    width: 100%;
-    .normal {
-      width: 70%;
-      max-width: 1440px;
-    }
-    .scrolling {
-      background: white;
-      ul {
+      .inner__nav__fix {
         width: 55%;
         max-width: 1440px;
       }
     }
   }
-  @media only screen and (min-width: 1550px) {
+  @media only screen and (min-width: 1280px) {
     .normal {
+      max-width: 1440px;
+      margin: 0 auto;
+      .inner__nav__fix {
+      }
     }
     .scrolling {
-      ul {
-        width: 55%;
+      width: 100%;
+      .inner__nav__fix {
+        margin: 0 auto;
+        max-width: 1000px;
+
+        ul {
+          padding: 1rem 0;
+          li {
+            img {
+              width: 100px;
+            }
+          }
+        }
       }
     }
   }
@@ -132,30 +122,29 @@ export default class DesktopNavbar extends Component {
     return (
       <DesktopHeader>
         <div className={this.state.isTop ? "normal" : "scrolling"}>
-          <ul>
-            <li>
-              <Link to="/zano-ultra">Zano Ultra</Link>
-            </li>
-            <li>
-              <Link to="/zano-hub">Zano Hub</Link>
-            </li>
-            <li className="header__logo">
-              <Link to="/">
-                <img src={ZanoLogo} alt="Zano Logo Black" />
-              </Link>
-            </li>
-            <li>
-              <Link to="/how-to-buy">How to buy</Link>
-            </li>
-            <li className="header__contact">
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+          <div className="inner__nav__fix">
+            <ul>
+              <li>
+                <Link to="/zano-ultra">Zano Ultra</Link>
+              </li>
+              <li>
+                <Link to="/zano-hub">Zano Hub</Link>
+              </li>
+              <li className="header__logo">
+                <Link to="/">
+                  <img src={ZanoLogo} alt="Zano Logo Black" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/how-to-buy">How to buy</Link>
+              </li>
+              <li className="header__contact">
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </DesktopHeader>
     );
   }
 }
-
-// {this.state.isTop ? 'down' : 'up'}
-// ${({ open }) => (open ? "block" : "none")}
