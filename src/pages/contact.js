@@ -263,7 +263,7 @@ const MainWrapper = styled.div`
     width: 80%;
   }
   @media only screen and (min-width: 1440px) {
-    max-width: 1440px;
+    max-width: 1140px;
   }
 `;
 
