@@ -11,7 +11,7 @@ const FooterStyle = styled.footer`
     width: 100%;
     background-image: url(${WhiteBackground});
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     div {
       text-align: center;
       padding: 3rem 0;
@@ -25,7 +25,7 @@ const FooterStyle = styled.footer`
     }
   }
   @media only screen and (min-width: 1280px) {
-    background-size: 85% 330%;
+    background-size: contain;
   }
 `;
 

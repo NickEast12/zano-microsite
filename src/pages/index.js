@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 import Background from "../components/background";
 
-import ZanoMicrochip from "../components/images/ZanoMicrochip";
+import ZanoStamp from "../components/images/zanostamp";
 
 import ZanoHubLogo from "../images/Zano-Hub-logo.png";
 import ZanoUltraLogo from "../images/Zano-Ultra-logo.png";
@@ -79,6 +79,7 @@ const ProductSection = styled.section`
       color: white;
       padding: 3rem 2rem 0rem 3rem;
       height: 20rem;
+      cursor: pointer;
 
       p {
         margin: 1rem 0 0.5rem 0;
@@ -182,18 +183,13 @@ const ProductSection = styled.section`
       top: 2rem;
       left: 0;
       z-index: -5;
-
-      .plus {
-        div {
-        }
-      }
     }
     .plus_desktop {
       width: 100%;
       height: 5rem;
       content: "";
       position: absolute;
-      z-index: 20;
+      z-index: 3;
       top: 2rem;
 
       div {
@@ -285,30 +281,13 @@ const LowerProduct = styled.section`
         }
       }
       &__stamp {
-        width: 100%;
-        div {
-          width: 130px;
-
-          margin: 2rem auto;
-          padding: 2rem 0;
-          background: black;
-          border-radius: 100%;
-          border: solid 7px ${(props) => props.theme.blue};
-          img {
-            width: 100px;
-          }
-        }
-      }
-    }
-  }
-  @media only screen and (min-width: 375px) {
-    .lower__product {
-      &__stamp {
-        width: 80%;
+        width: 50%;
         margin: 0 auto;
+        padding: 2rem 0;
       }
     }
   }
+
   @media only screen and (min-width: 414px) {
     .lower__product {
       width: 80%;
@@ -318,23 +297,20 @@ const LowerProduct = styled.section`
     .lower__product {
       width: 80%;
       &__stamp {
-        width: 45%;
+        width: 30%;
       }
     }
   }
   @media only screen and (min-width: 1024px) {
     .lower__product {
       width: 80%;
-      &__stamp {
-        width: 30%;
-      }
     }
   }
   @media only screen and (min-width: 1280px) {
     .lower__product {
       width: 70%;
       &__stamp {
-        margin: 4rem auto;
+        width: 20%;
       }
     }
   }
@@ -655,7 +631,7 @@ const ButtonLinks = styled.section`
     .button__wrapper {
       &__product,
       &__contact {
-        width: 160px;
+        width: 150px;
       }
       &__contact {
         p {
@@ -672,7 +648,7 @@ const ButtonLinks = styled.section`
       justify-content: space-between;
       &__product,
       &__contact {
-        width: 160px;
+        width: 150px;
       }
       &__contact {
         padding-top: 2rem;
@@ -722,31 +698,35 @@ const IndexPage = (props) => (
         </h1>
       </TitleSection>
       <ProductSection>
-        <div className="product__left">
-          <img
-            className="product__left__logo"
-            src={ZanoHubLogoReverse}
-            alt="Zano Hub Logo"
-          />
-          <p>
-            The world's first 80,000hz LED driver, eliminating light flicker for
-            good.
-          </p>
-          <img className="product__left__img" src={Product1} alt="Zano Hub" />
-        </div>
-        <div className="product__right">
-          <img
-            className="product__right__logo"
-            src={ZanoUltraLogoReverse}
-            alt=" Zano Ultra Logo"
-          />
-          <p>the next generation in smart, integrated lighting control</p>
-          <img
-            className="product__right__img"
-            src={Product2}
-            alt="Zano Ultra"
-          />
-        </div>
+        <Link to="/zano-hub">
+          <div className="product__left">
+            <img
+              className="product__left__logo"
+              src={ZanoHubLogoReverse}
+              alt="Zano Hub Logo"
+            />
+            <p>
+              The world's first 80,000hz LED driver, eliminating light flicker
+              for good.
+            </p>
+            <img className="product__left__img" src={Product1} alt="Zano Hub" />
+          </div>
+        </Link>
+        <Link to="/zano-ultra">
+          <div className="product__right">
+            <img
+              className="product__right__logo"
+              src={ZanoUltraLogoReverse}
+              alt=" Zano Ultra Logo"
+            />
+            <p>the next generation in smart, integrated lighting control</p>
+            <img
+              className="product__right__img"
+              src={Product2}
+              alt="Zano Ultra"
+            />
+          </div>
+        </Link>
         <section className="plus__wrapper">
           <section className="plus">
             <div></div>
@@ -775,9 +755,7 @@ const IndexPage = (props) => (
             customer high-end lighting control without the huge investment.
           </h4>
           <div className="lower__product__stamp">
-            <div>
-              <img src={TemplateLogo} alt="Zano Logo" />
-            </div>
+            <ZanoStamp />
           </div>
         </div>
       </LowerProduct>

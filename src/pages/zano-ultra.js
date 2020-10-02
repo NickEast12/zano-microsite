@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Background from "../components/background";
 import ContactButton from "../components/contact-button";
 
-import Logo from "../images/ZANO-LOGO-WHITE.png";
+import Logo from "../images/Zano-Ultra-reverse.png";
 import Microchip from "../images/Zano-Microchip-v1.png";
 import ZanoBackground from "../images/Zano-hub-background.png";
 import Flicker from "../images/flicker.png";
@@ -40,7 +40,7 @@ const TopSection = styled.section`
       background-repeat: no-repeat;
       &__wrapper {
         color: white;
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 4rem 2rem 1rem 2rem;
         height: 13em;
         h2 {
           font-size: 1rem;
@@ -48,7 +48,7 @@ const TopSection = styled.section`
           font-weight: 100;
         }
         &__logo {
-          width: 100px;
+          width: 200px;
         }
         &__chip {
           width: 175px;
@@ -88,7 +88,7 @@ const TopSection = styled.section`
           font-size: 1.5rem;
         }
         &__logo {
-          width: 100px;
+          width: 250px;
         }
         &__chip {
           width: 205px;

@@ -208,10 +208,10 @@ const Header = ({ siteTitle }) => {
         <div>
           <ul>
             <li>
-              <Link to="/zano-hub">Zano Hub</Link>
+              <Link to="/zano-ultra">Zano Ultra</Link>
             </li>
             <li>
-              <Link to="/zano-ultra">Zano Ultra</Link>
+              <Link to="/zano-hub">Zano Hub</Link>
             </li>
             <li>
               <Link to="/how-to-buy">How to buy</Link>

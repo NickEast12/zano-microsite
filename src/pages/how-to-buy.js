@@ -28,16 +28,13 @@ const MainSection = styled.section`
       h1 {
         font-family: "Lubalin-Book";
         padding: 2rem 0;
+        font-weight: bolder;
       }
       .chip {
         width: 150px;
         margin-bottom: 1rem;
       }
-      .blue {
-        color: ${(props) => props.theme.blue};
-        font-weight: 100;
-        padding-bottom: 1rem;
-      }
+
       h3 {
         font-weight: 100;
         span {
@@ -52,11 +49,7 @@ const MainSection = styled.section`
           font-weight: bolder;
         }
       }
-      h4 {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-        font-family: "Lubalin-Book";
-      }
+
       .hub {
         width: 150px;
         margin-top: 1.5rem;
@@ -82,9 +75,6 @@ const MainSection = styled.section`
       h3 {
         font-size: 1.7rem;
       }
-      h4 {
-        font-size: 1.2rem;
-      }
     }
   }
 `;
@@ -100,12 +90,14 @@ const HowToBuy = (props) => {
             <h1>How do I buy?</h1>
             <img className="chip" src={ZanoChip} alt="Zano Hub" />
             <h3 className="blue">
-              We will sell a licence for the Zano Ultra microprocessor.
-            </h3>
-            <h3>
+              <span>
+                We will sell a licence for the Zano Ultra microprocessor.
+              </span>
+              <br />
               Manufacturers can then embed this revolutionary technology into
               their designs.
             </h3>
+            <h3></h3>
             <p>
               These microprocessors will be pre-programmed at manufacturing
               stage and shipped out to the customers manufacturing plant to be
@@ -113,9 +105,9 @@ const HowToBuy = (props) => {
               <span> ZANO 868 </span> embedded into them which will allow for
               communication and remote software upgrades.
             </p>
-            <h4>
+            <h3>
               Through this new technology users can then access the Zano Hub.
-            </h4>
+            </h3>
             <img className="hub" src={ZanoHub} alt="Zano Hub" />
             <h3 className="lower">
               As a specialist in lighting control we understand the requirements

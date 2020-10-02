@@ -48,11 +48,15 @@ const DesktopHeader = styled.header`
           color: ${(props) => props.theme.blue};
         }
         li {
+          font-weight: 100;
           flex-grow: 1;
-          transition: color 0.25s ease;
-          font-weight: bolder;
+          transition: all 0.15s ease;
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 1rem;
+
           &:hover {
             color: ${(props) => props.theme.blue};
+            font-weight: 800;
           }
           img {
             width: 150px;
@@ -89,7 +93,7 @@ const DesktopHeader = styled.header`
       width: 100%;
       .inner__nav__fix {
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 800px;
 
         ul {
           padding: 1rem 0;

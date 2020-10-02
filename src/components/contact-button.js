@@ -9,7 +9,7 @@ const ContactButtonStyles = styled.div`
   margin: 0 auto;
   div {
     margin: 0 auto;
-    width: 130px;
+    width: 110px;
     background: black;
     border: solid 5px ${(props) => props.theme.blue};
     color: white;
@@ -19,6 +19,7 @@ const ContactButtonStyles = styled.div`
     border-radius: 100%;
     p {
       padding: 2rem 0;
+      font-size: 1rem;
     }
   }
 `;
