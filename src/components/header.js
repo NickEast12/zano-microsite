@@ -18,6 +18,9 @@ const MobileHeader = styled.header`
       list-style: none;
       position: relative;
       li {
+        a {
+          color: rebeccapurple !important;
+        }
         img {
           width: 100px;
         }

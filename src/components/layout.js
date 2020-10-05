@@ -14,7 +14,7 @@ const theme = {
 const GlobalStyle = createGlobalStyle`
 
   *, *:before, *:after {
-      box-sizing: inherit;
+      box-sizing: border-box;
       margin: 0px;
       padding: 0px;
       -webkit-font-smoothing: antialiased;

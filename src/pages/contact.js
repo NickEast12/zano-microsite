@@ -164,6 +164,12 @@ const LowerSection = styled.section`
       font-family: "Lubalin-Book";
       margin: 2rem 0 1rem 0;
     }
+    a {
+      color: inherit;
+      &:hover {
+        color: ${(props) => props.theme.blue};
+      }
+    }
     .icons {
       width: 70%;
       margin: 0 auto;
@@ -235,7 +241,7 @@ const Contact = (props) => {
               <div className="contact__wrapper__inner__content">
                 <p>For more information contact Jenny Knighting</p>
                 <p className="email">
-                  <a href="mailto:jenny.knighting@zanocontrols.co.uk">
+                  <a href="mailto:jenny.knighting@zanocontrols.co.uk?subject=Zano Technology Enquiry">
                     jenny.knighting@zanocontrols.co.uk
                   </a>
                 </p>
@@ -245,17 +251,37 @@ const Contact = (props) => {
         </MainSection>
         <LowerSection>
           <h2>Total lighting control</h2>
-          <p>www.zanocontrol.co.uk</p>
+          <a href="http://www.zanocontrol.co.uk" target="_blank">
+            <p>www.zanocontrol.co.uk</p>
+          </a>
           <p>0345 519 5858</p>
           <div className="icons">
             <div>
-              <FacebookIcon />
+              <a
+                href="https://www.facebook.com/ZanoControls/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon />
+              </a>
             </div>
             <div>
-              <LinkedinIcon />
+              <a
+                href="https://www.linkedin.com/company/zano-controls/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedinIcon />
+              </a>
             </div>
             <div>
-              <TwitterIcon />
+              <a
+                href="https://twitter.com/ZanoControls"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterIcon />
+              </a>
             </div>
           </div>
         </LowerSection>
