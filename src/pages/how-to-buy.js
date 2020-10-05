@@ -97,7 +97,6 @@ const HowToBuy = (props) => {
               Manufacturers can then embed this revolutionary technology into
               their designs.
             </h3>
-            <h3></h3>
             <p>
               These microprocessors will be pre-programmed at manufacturing
               stage and shipped out to the customers manufacturing plant to be
@@ -105,9 +104,9 @@ const HowToBuy = (props) => {
               <span> ZANO 868 </span> embedded into them which will allow for
               communication and remote software upgrades.
             </p>
-            <h3>
+            <p>
               Through this new technology users can then access the Zano Hub.
-            </h3>
+            </p>
             <img className="hub" src={ZanoHub} alt="Zano Hub" />
             <h3 className="lower">
               As a specialist in lighting control we understand the requirements

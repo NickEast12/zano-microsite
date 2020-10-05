@@ -27,10 +27,16 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Avant', sans-serif;
     }
     a:visited {
-      color: inherit;
+      /* color: inherit; */
     }
     a {
-      color: inherit!important;
+      /* color: inherit; */
+      
+    }
+    a[aria-current="page"] {
+      color: ${(props) => props.theme.blue}!important;
+      font-weight: 900;
+
     }
     a:-webkit-any-link {
       text-decoration: none!important;

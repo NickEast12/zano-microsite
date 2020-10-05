@@ -56,6 +56,9 @@ const MainSection = styled.section`
             color: ${(props) => props.theme.blue};
             font-size: 0.8rem;
             padding-top: 1rem;
+            a {
+              color: inherit;
+            }
           }
         }
       }
@@ -223,7 +226,10 @@ const Contact = (props) => {
           </div>
           <div className="contact__wrapper">
             <div className="contact__wrapper__img">
-              <img src={ContactImage} alt="Contact Image" />
+              <img
+                src={ContactImage}
+                alt="contact page, zano hub and zano ultra"
+              />
             </div>
             <div className="contact__wrapper__inner">
               <div className="contact__wrapper__inner__content">

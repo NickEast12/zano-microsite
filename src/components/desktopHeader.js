@@ -43,28 +43,30 @@ const DesktopHeader = styled.header`
           flex-grow: 10;
           text-align: center;
         }
-        .header__contact {
-          font-weight: bolder;
-          color: ${(props) => props.theme.blue};
-        }
+
         li {
           font-weight: 100;
           flex-grow: 1;
           transition: all 0.15s ease;
-          color: rgba(0, 0, 0, 0.65);
           font-size: 1rem;
+          transition: all 0.5s ease;
 
-          &:hover {
-            color: ${(props) => props.theme.blue};
-            font-weight: 800;
+          a {
+            transition: all 0.5s ease;
+            color: rgba(0, 0, 0, 0.65);
+            &:hover {
+              color: ${(props) => props.theme.blue};
+              font-weight: 900;
+            }
           }
-          img {
-            width: 150px;
-          }
+        }
+        img {
+          width: 150px;
         }
       }
     }
   }
+
   @media only screen and (min-width: 1024px) {
     width: 100%;
     .normal {

@@ -11,7 +11,6 @@ import ZanoStamp from "../components/images/zanostamp";
 
 import ZanoHubLogo from "../images/Zano-Hub-logo.png";
 import ZanoUltraLogo from "../images/Zano-Ultra-logo.png";
-import TemplateLogo from "../images/ZANO-LOGO-WHITE.png";
 import ZanoHubLogoReverse from "../images/Zano-Hub-reverse.png";
 import ZanoUltraLogoReverse from "../images/Zano-Ultra-reverse.png";
 

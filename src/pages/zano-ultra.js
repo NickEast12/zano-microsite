@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -10,7 +9,6 @@ import ContactButton from "../components/contact-button";
 import Logo from "../images/Zano-Ultra-reverse.png";
 import Microchip from "../images/Zano-Microchip-v1.png";
 import ZanoBackground from "../images/Zano-hub-background.png";
-import Flicker from "../images/flicker.png";
 import LowerBackground from "../images/light2.png";
 import ZanoHub from "../images/Zanohub.png";
 
