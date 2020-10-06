@@ -50,13 +50,14 @@ const DesktopHeader = styled.header`
           transition: all 0.15s ease;
           font-size: 1rem;
           transition: all 0.5s ease;
+          width: 80px;
 
           a {
             transition: all 0.5s ease;
             color: rgba(0, 0, 0, 0.65);
             &:hover {
               color: ${(props) => props.theme.blue};
-              font-weight: 900;
+              font-size: 1.05rem;
             }
           }
         }
