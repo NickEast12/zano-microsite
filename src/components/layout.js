@@ -6,12 +6,24 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 import Header from "./header";
 import Footer from "./footer";
+import titleFont from "../assets/fonts/Lubalin_Graph_Book.ttf";
+import bodyFont from "../assets/fonts/ITC-Avant-Garde-Gothic-LT-Book-Regular.otf";
 
 const theme = {
   black: "#000",
   blue: "rgb(75, 173, 209)",
 };
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: "Lubalin-Book";
+  src: url(${titleFont});
+}
+@font-face {
+  font-family: "Avant";
+  src: url(${bodyFont});
+
+}
 
   *, *:before, *:after {
       /* box-sizing: border-box; */
@@ -27,10 +39,10 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Avant', sans-serif;
     }
     a:visited {
-      /* color: inherit; */
+      color: inherit;
     }
     a {
-      /* color: inherit; */
+      color: inherit;
       
     }
     a[aria-current="page"] {

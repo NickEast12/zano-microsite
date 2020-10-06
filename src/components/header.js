@@ -102,9 +102,7 @@ const MobileMenu = styled.header`
         display: ${({ open }) => (open ? "block" : "none")};
         font-weight: bolder;
       }
-      .contact {
-        color: ${(props) => props.theme.blue};
-      }
+    
     }
   }
 `;
