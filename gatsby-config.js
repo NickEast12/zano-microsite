@@ -3,7 +3,7 @@ module.exports = {
     title: `Zano Controls`,
     description: `needs to be added`,
     author: `Nick East`,
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://www.zanotechnology.co.uk/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -59,8 +59,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.example.com",
-        sitemap: "https://www.example.com/sitemap.xml",
+        host: "https://www.zanotechnology.co.uk/",
+        sitemap: "https://www.zanotechnology.co.uk/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

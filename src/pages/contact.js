@@ -251,7 +251,11 @@ const Contact = (props) => {
         </MainSection>
         <LowerSection>
           <h2>Total lighting control</h2>
-          <a href="http://www.zanocontrol.co.uk" target="_blank">
+          <a
+            href="http://www.zanocontrol.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p>www.zanocontrol.co.uk</p>
           </a>
           <p>0345 519 5858</p>
